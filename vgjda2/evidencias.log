@@ -160,3 +160,76 @@ RESULTADO TESTE 1: SUCESSO! O carro retornou imediatamente.
 [?2004lexit
 
 Script done on 2026-10-31 08:10:16-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-10-31 08:33:28-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="91" LINES="10"]
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ pq[K[Kdate
+[?2004lSat Oct 31 08:33:31 -03 2026
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ whoami
+[?2004lgabyv
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ wp[K[Kpwd
+[?2004l/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ cd vgjda2
+[?2004l[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7mvoid station_on_board(struct [27m[7ms[27m[7mtation *station) { [27m
+[7m    // ERRO: Decrementa sem avisar o trem via cond_signal quando o último passageiro senta[27m
+[7m    station->boarding--;[27m
+[7m}[27m[A[A[A[A]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ void station_on_board(struct station *station) {
+    // ERRO: Decrementa sem avisar o trem via cond_signal quando o último passageiro senta
+    station->boarding--;
+[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mgcc -Wall -Wextra -O2 -pthrea[27m[7md[27m[7m -o test_sync_car sync_car.c test_sync_car.c [27m
+[7m./test_sync_car[27m[A[A]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ gcc -Wall -Wextra -O2 -pthread -o test_sync_car sync_car.c test_sync_car.c
+./test_sync_car
+[?2004l[01m[Ksync_car.c:72:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstation_on_board[m[K’
+   72 | void [01;31m[Kstation_on_board[m[K(struct station *station) {
+      |      [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[Ksync_car.c:68:6:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kstation_on_board[m[K’ with type ‘[01m[Kvoid(struct station *)[m[K’
+   68 | void [01;36m[Kstation_on_board[m[K(struct station *station) {
+      |      [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[Ktest_sync_car.c: No such file or directory
+compilation terminated.
+bash: ./test_sync_car: No such file or directory
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7mcp ../test_sync_car.c .[27m
+[7mgcc -Wall -Wextra -O2 -pthread -o test_sync_car sync_car.c test_sync_car.c[27m
+[7m./test_sync_car[27m[A[A]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ cp ../test_sync_car.c .
+gcc -Wall -Wextra -O2 -pthread -o test_sync_car sync_car.c test_sync_car.c
+./test_sync_car
+[?2004lcp: cannot stat '../test_sync_car.c': No such file or directory
+[01m[Ktest_sync_car.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ktest_sync_car.c:54:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+   54 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+car entering station with 30 free seats
+Error: station_load_car failed
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [K]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ eci[K[Kxit
+[?2004lexit
+
+Script done on 2026-10-31 08:43:04-03:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2026-10-31 09:28:09-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="201" LINES="11"]
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ date [K
+[?2004lSat Oct 31 09:28:21 -03 2026
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ whoami
+[?2004lgabyv
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ pwd
+[?2004l/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ cd vgjda2
+[?2004l[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7mgcc -Wall -Wextra -O2 -pthread -o test_sync_car sync_car.c test_sync_car.c[27m
+[7m./test_sync_car[27m[A]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ gcc -Wall -Wextra -O2 -pthread -o test_sync_car sync_car.c test_sync_car.c
+./test_sync_car
+[?2004l[01m[Ktest_sync_car.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ktest_sync_car.c:54:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-parameter-Wunused-parameter]8;;[m[K]
+   54 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+car entering station with 1 free seats
+car departed station with 1 new passenger(s) (expected 1)
+car entering station with 30 free seats
+car departed station with 30 new passenger(s) (expected 30)
+car entering station with 23 free seats
+car departed station with 23 new passenger(s) (expected 23)
+car entering station with 32 free seats
+car departed station with 32 new passenger(s) (expected 32)
+car entering station with 43 free seats
+car departed station with 14 new passenger(s) (expected 14)
+Looks good!
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-31 09:29:37-03:00 [COMMAND_EXIT_CODE="0"]

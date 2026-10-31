@@ -65,25 +65,19 @@ void station_wait_for_car(struct station *station){
     pthread_mutex_unlock(&station->lock);
 }
 
+//chamada pelo passageiro depois de sentar, o ultimo a chamar avisa ao carro
 void station_on_board(struct station *station) {
-    (void)station;
-}
 
-// MAIN DE TESTE DA STATION_LOAD_CAR
-int main() {
-    struct station s;
-    station_init(&s);
+    pthread_mutex_lock(&station -> lock);
 
-    printf("--- TESTE 1: station_load_car sem passageiros ---\n");
-    station_load_car(&s, 5);
-    printf("Carro presente após saída: %d (esperado: 0)\n", s.carro_presente);
-    printf("Assentos livres após saída: %d (esperado: 0)\n", s.assentos_livre);
+    station -> boarding--;
 
-    if (s.carro_presente == 0 && s.assentos_livre == 0) {
-        printf("RESULTADO TESTE 1: SUCESSO! O carro retornou imediatamente.\n\n");
-    } else {
-        printf("RESULTADO TESTE 1: FALHA!\n\n");
+    //o carro só precisa reavaliar quando ninguem mais esta embarcando
+    if (station -> boarding == 0){
+        pthread_cond_signal(&station -> passageiro_sentado);
+
     }
+    pthread_mutex_unlock(&station->lock);
 
-    return 0;
+
 }
