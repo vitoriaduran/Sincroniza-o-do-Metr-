@@ -48,3 +48,37 @@ RESULTADO: station_init FUNCIONOU!
 [?2004lexit
 
 Script done on 2026-10-31 06:24:00-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-10-31 06:51:58-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="91" LINES="10"]
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ w[Kdate
+[?2004lSat Oct 31 06:52:56 -03 2026
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ wg[Khoam [Ki
+[?2004lgabyv
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ pwd
+[?2004l/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ cd vgjda2
+[?2004l[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make
+[?2004lgcc -Wall -Wextra -O2 -pthread -o sync_car sync_car.c
+[01m[Ksync_car.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Ksync_car.c:55:5:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Ksleep[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   55 |     [01;31m[Ksleep[m[K(1); // Tempo para garantir que o passageiro entrou no station_wait_for_car
+      |     [01;31m[K^~~~~[m[K
+make: *** [makefile:11: sync_car] Error 1
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make clean
+[?2004lrm -f sync_car *.o
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make
+[?2004lgcc -Wall -Wextra -O2 -pthread -o sync_car sync_car.c
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ ./sync_car
+[?2004l--- TESTANDO STATION_WAIT_FOR_CAR ---
+[Passageiro] Chegou na estação e está esperando o trem...
+[Sistema] Trem chegando com 1 assento livre...
+[Passageiro] Conseguiu vaga e reservou o assento!
+
+--- RESULTADO DOS ESTADOS ---
+Esperando: 0 (esperado: 0)
+Assentos livres: 0 (esperado: 0)
+Boarding: 1 (esperado: 1)
+RESULTADO: station_wait_for_car FUNCIONOU COM SUCESSO!
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-31 06:55:28-03:00 [COMMAND_EXIT_CODE="0"]
