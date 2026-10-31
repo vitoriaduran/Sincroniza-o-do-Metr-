@@ -1,14 +1,14 @@
 CC      = gcc
 CFLAGS  = -Wall -Wextra -O2 -pthread
 TARGET  = sync_car
-
-SRC     = sync_car.c
-HDR     = sync_car.h
+IMPL    = sync_car.c
+TESTSRC = $(filter-out $(IMPL),$(wildcard *.c))
+HDRS    = $(wildcard *.h)
 
 all: $(TARGET)
 
-$(TARGET): $(SRC) $(HDR)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+$(TARGET): $(IMPL) $(TESTSRC) $(HDRS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(IMPL) $(TESTSRC)
 
 run: $(TARGET)
 	./$(TARGET)
