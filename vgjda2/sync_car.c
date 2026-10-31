@@ -14,6 +14,38 @@ void station_init(struct station *station){
     station-> carro_presente = 0;
 }
 
+//chama pela thread do carro quando ele chega com count assentos libre 
+//so retorna quando: ninguem mais espera na plataforma ou nao tem mais assentos livres
+// e todos os passageiros que ja reservaram assentos ja chamara ststation_on_board
+void station_load_car(struct station *station, int count){
+
+    pthread_mutex_lock(&station->lock);
+
+    station->carro_presente =1;
+    if (count >  0){
+        station -> assentos_livre = count;
+    }
+    else{
+        station -> assentos_livre =  0;
+    }
+
+    //acorda todos os passageiros(cada um olha para verificar se tem assentos para eles)
+    pthread_cond_broadcast(&station -> chegada_carro );
+
+    //espera enquanto ainda for possivel embarcar alguem ou ainda tiver passageiro a caminho do assento
+    while ((station->esperando > 0 && station -> assentos_livre > 0) || station -> boarding > 0 ){
+        pthread_cond_wait (&station -> passageiro_sentado, & station -> lock);
+    }
+    //carro vai embora: estaçao fica sem carro e sem assento
+    station -> carro_presente = 0;
+    station->assentos_livre = 0;
+
+    pthread_mutex_unlock(&station->lock);
+
+
+}
+	
+
 //chamada por cada passageiro ao chegar na estação. 
 //só vai retornar quando há carro na estaçao e um assento livre
 void station_wait_for_car(struct station *station){
@@ -33,49 +65,24 @@ void station_wait_for_car(struct station *station){
     pthread_mutex_unlock(&station->lock);
 }
 
-void* passageiro_thread(void *arg) {
-    struct station *s = (struct station*) arg;
-    printf("[Passageiro] Chegou na estação e está esperando o trem...\n");
-    
-    station_wait_for_car(s);
-    
-    printf("[Passageiro] Conseguiu vaga e reservou o assento!\n");
-    return NULL;
+void station_on_board(struct station *station) {
+    (void)station;
 }
 
+// MAIN DE TESTE DA STATION_LOAD_CAR
 int main() {
     struct station s;
     station_init(&s);
 
-    pthread_t t_passageiro;
+    printf("--- TESTE 1: station_load_car sem passageiros ---\n");
+    station_load_car(&s, 5);
+    printf("Carro presente após saída: %d (esperado: 0)\n", s.carro_presente);
+    printf("Assentos livres após saída: %d (esperado: 0)\n", s.assentos_livre);
 
-    printf("--- TESTANDO STATION_WAIT_FOR_CAR ---\n");
-
-    // 1. Criar a thread do passageiro
-    pthread_create(&t_passageiro, NULL, passageiro_thread, &s);
-    sleep(1); // Tempo para garantir que o passageiro entrou no station_wait_for_car
-
-    // 2. Simular a chegada do trem (liberando 1 assento)
-    pthread_mutex_lock(&s.lock);
-    printf("[Sistema] Trem chegando com 1 assento livre...\n");
-    s.carro_presente = 1;
-    s.assentos_livre = 1;
-    pthread_cond_signal(&s.chegada_carro); // Avisa o passageiro
-    pthread_mutex_unlock(&s.lock);
-
-    // 3. Aguardar a thread do passageiro finalizar
-    pthread_join(t_passageiro, NULL);
-
-    // 4. Verificação de estado
-    printf("\n--- RESULTADO DOS ESTADOS ---\n");
-    printf("Esperando: %d (esperado: 0)\n", s.esperando);
-    printf("Assentos livres: %d (esperado: 0)\n", s.assentos_livre);
-    printf("Boarding: %d (esperado: 1)\n", s.boarding);
-
-    if (s.esperando == 0 && s.assentos_livre == 0 && s.boarding == 1) {
-        printf("RESULTADO: station_wait_for_car FUNCIONOU COM SUCESSO!\n");
+    if (s.carro_presente == 0 && s.assentos_livre == 0) {
+        printf("RESULTADO TESTE 1: SUCESSO! O carro retornou imediatamente.\n\n");
     } else {
-        printf("RESULTADO: FALHA no teste de estado!\n");
+        printf("RESULTADO TESTE 1: FALHA!\n\n");
     }
 
     return 0;
