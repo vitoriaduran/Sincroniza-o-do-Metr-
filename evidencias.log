@@ -1,0 +1,50 @@
+Script started on 2026-10-31 06:20:29-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="91" LINES="10"]
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ date
+[?2004lSat Oct 31 06:20:42 -03 2026
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ whoami
+[?2004lgabyv
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ pwd
+[?2004l/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ make clean[[K
+[?2004lmake: *** No rule to make target 'clean'.  Stop.
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ make
+[?2004lmake: *** No targets specified and no makefile found.  Stop.
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ [7mgcc -Wall -Wextra -pthread -o sync_c[27m[7ma[27m[7mr sync_car.c[27m[A]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ gcc -Wall -Wextra -pthread -o sync_car sync_car.c
+[?2004l[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[Ksync_car.c: No such file or directory
+compilation terminated.
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ [7m./sync_car[27m./sync_car
+[?2004lbash: ./sync_car: No such file or directory
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-[00m$ cd vgjda2
+[?2004l[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make
+[?2004lgcc -Wall -Wextra -O2 -pthread -o sync_car sync_car.c
+[01m[Ksync_car.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Ksync_car.c:22:5:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kprintf[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   22 |     [01;31m[Kprintf[m[K("--- TESTANDO STATION_INIT ---\n");
+      |     [01;31m[K^~~~~~[m[K
+[01m[Ksync_car.c:4:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Kprintf[m[K’
+    3 | #include "sync_car.h"
+  +++ |+[32m[K#include <stdio.h>[m[K
+    4 | 
+[01m[Ksync_car.c:22:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kprintf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+   22 |     [01;35m[Kprintf[m[K("--- TESTANDO STATION_INIT ---\n");
+      |     [01;35m[K^~~~~~[m[K
+[01m[Ksync_car.c:22:5:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdio.h>[m[K’ or provide a declaration of ‘[01m[Kprintf[m[K’
+make: *** [makefile:11: sync_car] Error 1
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make clen[Kan
+[?2004lrm -f sync_car *.o
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ make
+[?2004lgcc -Wall -Wextra -O2 -pthread -o sync_car sync_car.c
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ ./x[Ksync_car.c
+[?2004l./sync_car.c: line 5: syntax error near unexpected token `('
+./sync_car.c: line 5: `void station_init(struct station *station){'
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7m./sync_car[27m./sync_car
+[?2004l--- TESTANDO STATION_INIT ---
+Esperando: 0 (esperado: 0)
+Assentos livres: 0 (esperado: 0)
+Boarding: 0 (esperado: 0)
+Carro presente: 0 (esperado: 0)
+RESULTADO: station_init FUNCIONOU!
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ w[Kexit
+[?2004lexit
+
+Script done on 2026-10-31 06:24:00-03:00 [COMMAND_EXIT_CODE="0"]

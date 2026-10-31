@@ -7,9 +7,10 @@ struct station {
     pthread_mutex_t lock;
     pthread_cond_t chegada_carro;
     pthread_cond_t passageiro_sentado;
+    int esperando; 
     int assentos_livre;
-    int passageiros_esperando;
-    int passageiros_embarcando;
+    int boarding;
+    int carro_presente; //1 se station_load_car está em execuçao, 0 se nao estiver
 };
 
 void station_init(struct station *station);
