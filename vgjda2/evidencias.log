@@ -233,3 +233,23 @@ Looks good!
 [?2004lexit
 
 Script done on 2026-10-31 09:29:37-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-10-31 10:35:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="182" LINES="10"]
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ date
+[?2004lSat Oct 31 10:35:03 -03 2026
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ whoami
+[?2004lgabyv
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ pwd
+[?2004l/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7mgcc -Wall -Wextra -O2 -pthread -o teste_limite sync_car.c teste_limite.c[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -O2 -pthread -o teste_limite sync_car.c teste_limite.c
+[?2004l[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[Kteste_limite.c: No such file or directory
+compilation terminated.
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ [7mgcc -Wall -Wextra -O2 -pthread -o teste_limite sync_car.c teste_limite.c[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -O2 -pthread -o teste_limite sync_car.c teste_limite.c[C[C[1@s[1P[C[1@s[C[C[C[C[C[C[C[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[C[C[1@s[C[C
+[?2004l[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ ./testes_limites
+[?2004l[limite] sem passageiros: retornou imediatamente
+[invalido] count = -5: retornou imediatamente
+[invalido] passageiro liberado? nao (esperado: nao)
+[limite] carro com 1 assento: passageiro liberado? SIM (esperado: SIM)
+[?2004h]0;gabyv@Vitria: /mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[01;32mgabyv@Vitria[00m:[01;34m/mnt/c/Users/gabyv/Sincroniza-o-do-Metr-/vgjda2[00m$ exit
+[?2004lexit
+
+Script done on 2026-10-31 10:35:55-03:00 [COMMAND_EXIT_CODE="0"]
