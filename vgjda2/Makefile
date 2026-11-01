@@ -1,28 +1,32 @@
 CC      = gcc
 CFLAGS  = -Wall -Wextra -O2 -pthread
+TARGET  = sync_car
 IMPL    = sync_car.c
 HDRS    = sync_car.h
 
-# Procura qualquer outro arquivo .c na pasta para usar como arquivo de teste (ex: test_sync_car.c)
+# Teste(s): qualquer outro .c da pasta (ex.: test_sync_car.c do professor, que tem a main)
 TEST_SRC = $(filter-out $(IMPL), $(wildcard *.c))
 
+ifeq ($(TEST_SRC),)
+# Sem arquivo de teste: compila so o modulo (sync_car.o), sem erro
 all: sync_car.o
+	@echo "Aviso: nenhum .c de teste (com main) na pasta; compilado apenas sync_car.o."
+	@echo "Para gerar o executavel sync_car, copie o test_sync_car.c do professor para esta pasta e rode make."
+run: all
+else
+# Com arquivo de teste: gera o executavel sync_car
+all: $(TARGET)
+run: $(TARGET)
+	./$(TARGET)
+endif
 
-# Gera apenas o modulo objeto exigido
 sync_car.o: $(IMPL) $(HDRS)
 	$(CC) $(CFLAGS) -c $(IMPL) -o sync_car.o
 
-# Se o professor rodar 'make run' ou 'make sync_car'
-run: sync_car.o
-@if [ -z "$(TEST_SRC)" ]; then \
-	echo "Nenhum arquivo de teste (.c com main) foi encontrado na pasta."; \
-	echo "Compilado apenas o objeto sync_car.o com sucesso."; \
-else \
-	$(CC) $(CFLAGS) -o test_runner sync_car.o $(TEST_SRC); \
-	./test_runner; \
-fi
+$(TARGET): sync_car.o $(TEST_SRC) $(HDRS)
+	$(CC) $(CFLAGS) -o $(TARGET) sync_car.o $(TEST_SRC)
 
 clean:
-	rm -f *.o test_runner sync_car test_sync_car teste_limite
+	rm -f $(TARGET) *.o
 
 .PHONY: all run clean
