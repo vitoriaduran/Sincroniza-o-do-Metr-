@@ -14,22 +14,45 @@ Deve funcionar em qualquer Linux/Unix/macOS com `gcc` e `make`.
 |---|---|
 | `sync_car.h` | Define a `struct station` (1 mutex, 2 variáveis de condição e os contadores `esperando`, `assentos_livre`, `boarding`, `carro_presente`) e os protótipos das 4 funções. |
 | `sync_car.c` | Implementação de `station_init`, `station_load_car`, `station_wait_for_car` e `station_on_board`. Não possui `main`. |
-| `test_sync_car.c` | Teste automatizado fornecido pelo professor (contém o `main`). Não foi alterado. |
-| `Makefile` | Compila `sync_car.c` + `test_sync_car.c` e gera o executável `sync_car`; possui as regras `all`, `run` e `clean`. |
+| `Makefile` | Compila o módulo e, quando há um arquivo de teste com `main` na pasta, gera o executável `sync_car`. Regras: `all`, `run` e `clean`. |
 | `evidencias.log` | Log do terminal (comando `script`) com compilações, erros e testes ao longo do desenvolvimento. |
-| `vgjda2.pdf` | Relatório. |
+| `README.md` | Este arquivo. |
+ 
+O arquivo de teste `test_sync_car.c` (que contém a `main`) é fornecido pelo professor e **não** está incluído neste pacote.
  
 ## Como compilar, executar e testar
  
+Descompacte o pacote e entre na pasta:
+ 
 ```bash
+tar -xf vgjda2.tar
 cd vgjda2
-make clean      # remove executáveis e objetos
-make            # gera o executável ./sync_car
-./sync_car      # roda o teste do professor; deve terminar com "Looks good!"
+```
+ 
+**1. Compilar apenas o módulo** (sem arquivo de teste na pasta):
+ 
+```bash
+make            # compila sync_car.c e gera sync_car.o
+```
+ 
+**2. Compilar o executável e rodar o teste automatizado:**
+ 
+```bash
+cp /caminho/do/test_sync_car.c .   # copie o teste do professor para esta pasta
+make clean
+make            # gera o executável ./sync_car (sync_car.c + test_sync_car.c)
+./sync_car      # deve terminar com "Looks good!"
 ```
  
 `make run` compila (se necessário) e executa em um só passo.
  
+**3. Limpar os arquivos compilados:**
+ 
+```bash
+make clean      # remove sync_car e os arquivos .o
+```
+ 
+O Makefile compila `sync_car.c` junto com qualquer outro `.c` presente na pasta (o arquivo de teste, qualquer que seja o nome).
 O único aviso do compilador (`unused parameter 'foo'` em `alarm_handler`) vem do `test_sync_car.c` do professor, não da implementação.
  
 ## Resumo da solução
