@@ -14,11 +14,11 @@ Deve funcionar em qualquer Linux/Unix/macOS com `gcc` e `make`.
 |---|---|
 | `sync_car.h` | Define a `struct station` (1 mutex, 2 variáveis de condição e os contadores `esperando`, `assentos_livre`, `boarding`, `carro_presente`) e os protótipos das 4 funções. |
 | `sync_car.c` | Implementação de `station_init`, `station_load_car`, `station_wait_for_car` e `station_on_board`. Não possui `main`. |
+| `sync_car-runner.c` | Arquivo de teste automatizado fornecido pelo professor (contém a função `main`). |
 | `Makefile` | Compila o módulo e, quando há um arquivo de teste com `main` na pasta, gera o executável `sync_car`. Regras: `all`, `run` e `clean`. |
 | `evidencias.log` | Log do terminal (comando `script`) com compilações, erros e testes ao longo do desenvolvimento. |
 | `README.md` | Este arquivo. |
  
-O arquivo de teste `test_sync_car.c` (que contém a `main`) é fornecido pelo professor e **não** está incluído neste pacote.
  
 ## Como compilar, executar e testar
  
@@ -29,18 +29,16 @@ tar -xf vgjda2.tar
 cd vgjda2
 ```
  
-**1. Compilar apenas o módulo** (sem arquivo de teste na pasta):
+**1. Compilar o projeto** :
  
 ```bash
-make            # compila sync_car.c e gera sync_car.o
+make clean
+make            # gera o executável ./sync_car
 ```
  
-**2. Compilar o executável e rodar o teste automatizado:**
+**2.Executa o teste automatizado:**
  
 ```bash
-cp /caminho/do/test_sync_car.c .   # copie o teste do professor para esta pasta
-make clean
-make            # gera o executável ./sync_car (sync_car.c + test_sync_car.c)
 ./sync_car      # deve terminar com "Looks good!"
 ```
  
@@ -53,7 +51,7 @@ make clean      # remove sync_car e os arquivos .o
 ```
  
 O Makefile compila `sync_car.c` junto com qualquer outro `.c` presente na pasta (o arquivo de teste, qualquer que seja o nome).
-O único aviso do compilador (`unused parameter 'foo'` em `alarm_handler`) vem do `test_sync_car.c` do professor, não da implementação.
+O único aviso do compilador (`unused parameter 'foo'` em `alarm_handler`) vem do `sync_car-runner.c` do professor, não da implementação.
  
 ## Resumo da solução
  
